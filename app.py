@@ -4,6 +4,7 @@ import time
 from runningPIDs import pids
 import showGame
 import re
+import traceback
 
 
 class ProtonDiscordIntegration:
@@ -31,8 +32,13 @@ class ProtonDiscordIntegration:
 
 def main():
     listener = ProtonDiscordIntegration()
+    print("Started ProtonDiscordIntegration")
+    print("Listening for games...")
     while True:
-        listener.runCheck()
+        try:
+            listener.runCheck()
+        except Exception:
+            print(traceback.format_exc())
         time.sleep(5)
 
 if __name__ == "__main__":
