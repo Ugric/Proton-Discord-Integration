@@ -1,0 +1,14 @@
+[
+    {
+        "process": "GTA5.exe",
+        "state": "In Game",
+        "name": "Grand Theft Auto V",
+        "clientID": "1181994659887718510"
+    },
+    {
+        "process": "DetroitBecomeHu",
+        "state": "In Game",
+        "name": "Detroit: Become Human",
+        "clientID": "1182027526592270397"
+    }
+]
