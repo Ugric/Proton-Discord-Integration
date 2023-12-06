@@ -16,11 +16,12 @@ class ProtonDiscordIntegration:
         processes = psutil.process_iter()
         for process in processes:
             if process.pid in pids: continue
-            name = process.name()
             for game in self.knownGames:
-                if re.match(game["process"], name) is None: continue
+                allow = False
+                if "name" in game["requirement"] and re.fullmatch(game["requirement"]["name"], process.name()): allow = True
+                elif "cmd" in game["requirement"] and re.fullmatch(game["requirement"]["cmd"], " ".join(process.cmdline())): allow = True
+                if not allow: continue
                 pids[process.pid] = showGame.startGame(game, process.create_time(), process)
-                print(name, process.create_time())
         rm = []
         for pid in pids:
             if psutil.pid_exists(pid): continue

@@ -1,14 +1,20 @@
 [
     {
-        "process": "GTA5.exe",
+        "requirement": {"name":"GTA5.exe"},
         "state": "In Game",
         "name": "Grand Theft Auto V",
         "clientID": "1181994659887718510"
     },
     {
-        "process": "DetroitBecomeHu",
+        "requirement": {"name":"DetroitBecomeHu"},
         "state": "In Game",
         "name": "Detroit: Become Human",
         "clientID": "1182027526592270397"
+    },
+    {
+        "requirement": {"cmd":".*c:\\\\windows\\\\system32\\\\steam.exe .+The Last of Us Part I/launcher.exe service steam *"},
+        "state": "In Game",
+        "name": "The Last of Us Part I",
+        "clientID": "1182096488638189679"
     }
 ]
