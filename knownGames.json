@@ -6,6 +6,12 @@
         "clientID": "1181994659887718510"
     },
     {
+        "requirement": {"name":"RDR2.exe"},
+        "state": "In Game",
+        "name": "Red Dead Redemption 2",
+        "clientID": "1183217928808697876"
+    },
+    {
         "requirement": {"name":"DetroitBecomeHu"},
         "state": "In Game",
         "name": "Detroit: Become Human",
